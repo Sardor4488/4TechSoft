@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+ 
+import Footer from './4TechSoft/components/footer';
+import Header from './4TechSoft/components/header';
+import AppCss from './appWrapper';
+import { Routes, Route, Link } from "react-router-dom";
+import MainPage from './4TechSoft/pages/mainPage';
+import CoursesOffline from './4TechSoft/pages/coursesOffline';
+import CoursessOnline from './4TechSoft/pages/coursessOnline/CoursessOnline';
+import About from './4TechSoft/pages/about/about';
+import ToOrder from './4TechSoft/pages/toOrder';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <AppCss>
+    <div>
+      <Header/>
+      <Routes>
+        <Route path="/" element={ <MainPage/>} /> 
+        <Route path="/coursesOffline" element={ <CoursesOffline/>} /> 
+        <Route path="/coursesOnline" element={ <CoursessOnline/>} /> 
+        <Route path="/about" element={ <About/>} /> 
+        <Route path="/toOrder" element={ <ToOrder/>} /> 
+      </Routes>
+      <Footer/>
+   </div>
+  </AppCss>
   );
 }
 
