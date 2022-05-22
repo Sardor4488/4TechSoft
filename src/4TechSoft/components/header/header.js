@@ -1,22 +1,13 @@
-import { Button, Menu, MenuItem } from '@mui/material'
-import React from 'react'
+import React, { Component, useState } from "react";
+import { Button, Menu } from '@mui/material' 
 import { Link, NavLink } from 'react-router-dom'
 import HeaderCss from './headerCss'
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
-
-import { createTheme } from '@mui/material/styles';
-import { green } from '@mui/material/colors';
+import Box from '@mui/material/Box';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faX, faXmark } from '@fortawesome/free-solid-svg-icons';
-
-const theme = createTheme({
-  palette: {
-    primary: green,
-    secondary: green,
-  },
-});
+import { faBars,faXmark } from '@fortawesome/free-solid-svg-icons';
+ 
 
 function LinkTab(props) {
   return (
@@ -31,6 +22,8 @@ function LinkTab(props) {
 }
 
 const Header = () => {
+  
+const [isopen, setIsopen] = useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -51,7 +44,7 @@ const Header = () => {
             <div className='d-flex'>
               <h3 className='me-5 text-dark d-flex align-items-center logo'><span className='text-success'> 4Tech</span> Soft</h3>
               
-              <Box className='lg_none' sx={{ width: '100%' }}>
+              <Box className= "nav__menu lg_none"       >
                 <Tabs value={value} onChange={handleChange} className="d-flex align-items-center " aria-label="nav tabs example">
                   <LinkTab className="fw-bold pb-0 ps-0 pe-0 pt-0 " label= {<NavLink to='/' className="p-3 text-success">Bosh sahifa</NavLink>}  />
                   <LinkTab className="fw-bold pb-0 ps-0 pe-0 pt-0 " label= {<NavLink to='/toOrder' className="text-success p-3">Buyurtma berish</NavLink>}  />
@@ -81,13 +74,13 @@ const Header = () => {
               <Link to="#">  <Button variant="outlined" className='me-2' color="success"> Kirish  </Button></Link>
               <Link to="#"> <Button variant="contained" color="success"> Ro'yhatdan o'tish  </Button></Link>
             </div>
-            <FontAwesomeIcon className='faBars' icon={faBars} />
+            <FontAwesomeIcon className='faBars' onClick={()=> setIsopen(!isopen)} icon={faBars} />
           </div>
-          <div className='md-nav'>
+          <div className={`md-nav ${isopen && "d-show-nav " }`}>
             <div className='w-100 h-100'> 
               <div className='d-flex justify-content-between w-100 py-5 px-3 align-items-center'> 
                 <h3 className='me-5 text-dark d-flex align-items-center logo '><span className='text-success'> 4Tech</span> Soft</h3>
-                <FontAwesomeIcon icon={faXmark} className="faXmark h3 mb-0" />
+                <FontAwesomeIcon icon={faXmark} className="faXmark h3 mb-0" onClick={()=> setIsopen(!isopen)} />
               </div>
             <div className='d-flex justify-content-center flex-wrap align-items-center'>
               <LinkTab className="fw-bold pb-0 ps-0 pe-0 pt-0 " label= {<NavLink to='/' className="p-3 text-success">Bosh sahifa</NavLink>}  />
