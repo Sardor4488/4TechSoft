@@ -7,6 +7,7 @@ a{
 .header{
     background-color:#fff;
     /* position: fixed; */
+    box-shadow: -6px 1px 9px -3px rgba(34, 60, 80, 0.23);
     width: 100%;
 }
 .MuiTab-root{
@@ -24,7 +25,7 @@ background-color:#00E472;
     font-size:20px;
 }
 .logo{
-    width: 190px;
+    width: 180px;
     margin-bottom: 0 !important;
 }
 .md-nav{
@@ -39,6 +40,14 @@ background-color:#00E472;
     animation-name:navAnimate;
     animation-duration:0.4s;
 }
+.shadow-header{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.53);
+}
+
 @keyframes navAnimate {
     0%{
         right:-100%;
@@ -54,8 +63,8 @@ background-color:#00E472;
 .d-show-nav{
     display:none !important;
     transition: all 0.4s; 
-}
-@media only screen and (max-width:1164px) {
+} 
+@media only screen and (max-width:1065px) {
     .lg_none{
         display:none;
     }
@@ -63,11 +72,15 @@ background-color:#00E472;
     display:block !important;
 }
 }
-.success{
+.text-success{
     color:#00E472 !important;
 }
 .md-nav{
 display:block;
+}
+.header .d-flex{
+    padding-left: 10px !important;
+    padding-right: 15px !important;
 }
 `
 export default HeaderCss;
