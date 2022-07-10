@@ -69,9 +69,9 @@ const [isopen, setIsopen] = useState(true);
                 </Tabs>
               </Box>
             </div>
-            <div className='lg_none'>
-              <Link to="#">  <Button variant="outlined" className='me-2 btn-header' color="success"> Kirish  </Button></Link>
-              <Link to="#"> <Button variant="contained"  className="btn-header" color="success"> Ro'yhatdan o'tish  </Button></Link>
+            <div className='lg_none '>
+              <Link to="#">  <Button variant="outlined" className='me-2 btn-header ' color="success"> Kirish  </Button></Link>
+              <Link to="#"> <Button variant="contained"  className="btn-header " color="success"> Ro'yhatdan o'tish  </Button></Link>
             </div>
             <FontAwesomeIcon className='faBars' onClick={()=> setIsopen(!isopen)} icon={faBars} />
           </div>
