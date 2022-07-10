@@ -25,7 +25,6 @@ background-color:#00E472;
     font-size:20px;
 }
 .logo{
-    width: 180px;
     margin-bottom: 0 !important;
 }
 .md-nav{
@@ -77,10 +76,6 @@ background-color:#00E472;
 }
 .md-nav{
 display:block;
-}
-.header .d-flex{
-    padding-left: 10px !important;
-    padding-right: 15px !important;
 }
 `
 export default HeaderCss;

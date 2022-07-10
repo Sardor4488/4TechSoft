@@ -42,8 +42,8 @@ const [isopen, setIsopen] = useState(true);
         <div className='header'>
           <div className='d-flex w-100  px-5 py-3 d-flex align-items-center justify-content-between'>
             <div className='d-flex'>
-              <Link className="d-flex align-items-center" to="/">  <h3 className='me-2 text-dark d-flex align-items-center logo'><span className='text-success'> 4Tech</span> Soft</h3> </Link>
-              <Box className= "nav__menu lg_none"       >
+              <Link className="d-flex align-items-center" to="/">  <h3 className='  text-dark d-flex align-items-center logo px-0'><span className='text-success'> 4Tech</span> Soft</h3> </Link>
+              <Box className= "nav__menu lg_none ps-5"       >
                 <Tabs value={value} onChange={handleChange} className="d-flex align-items-center px-0" aria-label="nav tabs example">
                   <LinkTab className="fw-bold pb-0 ps-0 pe-0 pt-0 " label= {<NavLink to='/' className="py-3 px-1 text-success">Bosh sahifa</NavLink>}  />
                   <LinkTab className="fw-bold pb-0 ps-0 pe-0 pt-0 " label= {<NavLink to='/toOrder' className="text-success py-3 px-2">Buyurtma berish</NavLink>}  />
