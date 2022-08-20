@@ -5,10 +5,18 @@ a{
     text-decoration: none !important;
 }
 .header{
-    background-color:#fff;
+    background-color:#1E1E1E;
     /* position: fixed; */
     box-shadow: -6px 1px 9px -3px rgba(34, 60, 80, 0.23);
     width: 100%;
+}
+.logo{
+    font-size:25px !important;
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 0;
+}
+.logo-words{
+    z-index: 2 !important;
 }
 .MuiTab-root{
     /* padding-bottom:0; */

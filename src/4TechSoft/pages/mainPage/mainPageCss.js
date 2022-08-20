@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 const MainPageCss=styled.div`
  .main_page{
-     height: 100vh;
 
  }
  .success{
